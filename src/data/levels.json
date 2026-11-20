@@ -1,0 +1,1737 @@
+[
+  {
+    "id": "1-1",
+    "chapterId": 1,
+    "stageIndex": 1,
+    "title": "첫 걸음, 보석을 주워라!",
+    "mission": "앞으로 가서 파란 보석을 줍고, 깃발까지 도착해 보세요! (딱 블록 3개!)",
+    "width": 4,
+    "height": 3,
+    "start": { "x": 0, "y": 1, "dir": "E" },
+    "goal": { "x": 2, "y": 1 },
+    "walls": [
+      { "x": 0, "y": 0 },
+      { "x": 3, "y": 0 },
+      { "x": 0, "y": 2 },
+      { "x": 3, "y": 2 }
+    ],
+    "gems": [{ "x": 1, "y": 1 }],
+    "bonusGems": [{ "x": 2, "y": 1 }],
+    "availableBlocks": ["forward", "collect"],
+    "optimalBlocks": 3,
+    "hints": [
+      "로봇이 오른쪽(깃발 방향)을 보고 있어요. 앞으로 1칸 가면 보석, 1칸 더 가면 깃발이에요!",
+      "[앞으로 가기] 2개와 [보석 줍기] 1개가 필요해요.",
+      "순서대로 [앞으로 가기] → [보석 줍기] → [앞으로 가기]를 놓아 보세요!"
+    ],
+    "referenceSolution": {
+      "main": [
+        { "type": "forward" },
+        { "type": "collect" },
+        { "type": "forward" }
+      ]
+    }
+  },
+  {
+    "id": "1-2",
+    "chapterId": 1,
+    "stageIndex": 2,
+    "title": "오른쪽으로 꺾이는 숲길",
+    "mission": "앞으로 가서 오른쪽으로 방향을 튼 다음, 보석을 줍고 깃발에 도착해요!",
+    "width": 4,
+    "height": 4,
+    "start": { "x": 0, "y": 1, "dir": "E" },
+    "goal": { "x": 2, "y": 3 },
+    "walls": [
+      { "x": 0, "y": 2 },
+      { "x": 1, "y": 2 },
+      { "x": 3, "y": 1 },
+      { "x": 3, "y": 0 }
+    ],
+    "gems": [{ "x": 2, "y": 2 }],
+    "bonusGems": [{ "x": 2, "y": 1 }],
+    "availableBlocks": ["forward", "turn_left", "turn_right", "collect"],
+    "optimalBlocks": 6,
+    "hints": [
+      "먼저 앞으로 2칸 가서 모퉁이에 있는 황금 보너스 보석을 지나가세요.",
+      "모퉁이에서 [오른쪽으로 돌기]를 한 뒤 아래로 내려가면서 파란 보석을 주워요.",
+      "앞으로 → 앞으로 → 오른쪽 돌기 → 앞으로 → 보석 줍기 → 앞으로!"
+    ],
+    "referenceSolution": {
+      "main": [
+        { "type": "forward" },
+        { "type": "forward" },
+        { "type": "turn_right" },
+        { "type": "forward" },
+        { "type": "collect" },
+        { "type": "forward" }
+      ]
+    }
+  },
+  {
+    "id": "1-3",
+    "chapterId": 1,
+    "stageIndex": 3,
+    "title": "왼쪽으로 휘어지는 오솔길",
+    "mission": "이번에는 왼쪽으로 돌아서 위쪽 깃발까지 보석 두 개를 모아 가요!",
+    "width": 4,
+    "height": 4,
+    "start": { "x": 0, "y": 3, "dir": "E" },
+    "goal": { "x": 2, "y": 1 },
+    "walls": [
+      { "x": 0, "y": 1 },
+      { "x": 1, "y": 1 },
+      { "x": 1, "y": 2 },
+      { "x": 3, "y": 3 }
+    ],
+    "gems": [
+      { "x": 1, "y": 3 },
+      { "x": 2, "y": 2 }
+    ],
+    "bonusGems": [{ "x": 2, "y": 3 }],
+    "availableBlocks": ["forward", "turn_left", "turn_right", "collect"],
+    "optimalBlocks": 7,
+    "hints": [
+      "오른쪽으로 2칸 가는 길에 첫 번째 파란 보석이 있어요.",
+      "모퉁이(3,4)에서 [왼쪽으로 돌기]를 하면 위쪽 길로 올라갈 수 있어요.",
+      "앞으로 → 보석 줍기 → 앞으로 → 왼쪽 돌기 → 앞으로 → 보석 줍기 → 앞으로!"
+    ],
+    "referenceSolution": {
+      "main": [
+        { "type": "forward" },
+        { "type": "collect" },
+        { "type": "forward" },
+        { "type": "turn_left" },
+        { "type": "forward" },
+        { "type": "collect" },
+        { "type": "forward" }
+      ]
+    }
+  },
+  {
+    "id": "1-4",
+    "chapterId": 1,
+    "stageIndex": 4,
+    "title": "바위를 피해 돌아가기",
+    "mission": "앞을 막고 있는 큰 나무를 피해 위쪽으로 돌아서 보석을 줍고 깃발로 가요!",
+    "width": 5,
+    "height": 4,
+    "start": { "x": 1, "y": 2, "dir": "E" },
+    "goal": { "x": 3, "y": 2 },
+    "walls": [
+      { "x": 2, "y": 2 },
+      { "x": 2, "y": 3 },
+      { "x": 0, "y": 0 },
+      { "x": 4, "y": 0 }
+    ],
+    "gems": [{ "x": 2, "y": 1 }],
+    "bonusGems": [{ "x": 3, "y": 1 }],
+    "availableBlocks": ["forward", "turn_left", "turn_right", "collect"],
+    "optimalBlocks": 8,
+    "hints": [
+      "바로 앞이 막혀 있으니 먼저 왼쪽으로 돌아 위쪽으로 한 칸 올라가세요.",
+      "위쪽 길에서 오른쪽으로 돌고, 2칸 이동하며 파란 보석을 줍고 다시 오른쪽으로 돌아요.",
+      "왼쪽 돌기 → 앞으로 → 오른쪽 돌기 → 앞으로 → 보석 줍기 → 앞으로 → 오른쪽 돌기 → 앞으로!"
+    ],
+    "referenceSolution": {
+      "main": [
+        { "type": "turn_left" },
+        { "type": "forward" },
+        { "type": "turn_right" },
+        { "type": "forward" },
+        { "type": "collect" },
+        { "type": "forward" },
+        { "type": "turn_right" },
+        { "type": "forward" }
+      ]
+    }
+  },
+  {
+    "id": "1-5",
+    "chapterId": 1,
+    "stageIndex": 5,
+    "title": "숲속 지그재그 탐험",
+    "mission": "오른쪽과 왼쪽으로 번갈아 꺾이는 숲길을 지나 보석 2개를 모두 모아 깃발로 가요!",
+    "width": 5,
+    "height": 4,
+    "start": { "x": 0, "y": 1, "dir": "E" },
+    "goal": { "x": 3, "y": 2 },
+    "walls": [
+      { "x": 2, "y": 1 },
+      { "x": 0, "y": 2 },
+      { "x": 0, "y": 3 },
+      { "x": 3, "y": 1 },
+      { "x": 4, "y": 3 }
+    ],
+    "gems": [
+      { "x": 1, "y": 1 },
+      { "x": 2, "y": 2 }
+    ],
+    "bonusGems": [{ "x": 1, "y": 2 }],
+    "availableBlocks": ["forward", "turn_left", "turn_right", "collect"],
+    "optimalBlocks": 8,
+    "hints": [
+      "앞으로 1칸 가서 첫 보석을 줍고, 오른쪽으로 돌아 아래로 내려가세요.",
+      "황금 보너스 보석 칸에서 왼쪽으로 돌아 오른쪽으로 2칸 이동하면 돼요!",
+      "앞으로 → 보석 줍기 → 오른쪽 돌기 → 앞으로 → 왼쪽 돌기 → 앞으로 → 보석 줍기 → 앞으로!"
+    ],
+    "referenceSolution": {
+      "main": [
+        { "type": "forward" },
+        { "type": "collect" },
+        { "type": "turn_right" },
+        { "type": "forward" },
+        { "type": "turn_left" },
+        { "type": "forward" },
+        { "type": "collect" },
+        { "type": "forward" }
+      ]
+    }
+  },
+  {
+    "id": "2-1",
+    "chapterId": 2,
+    "stageIndex": 1,
+    "title": "사막의 직선 도로",
+    "mission": "앞으로 5칸이나 가야 해요! [반복하기] 블록을 써서 딱 2~3개 블록으로 해결해 봐요!",
+    "width": 6,
+    "height": 3,
+    "start": { "x": 0, "y": 1, "dir": "E" },
+    "goal": { "x": 5, "y": 1 },
+    "walls": [
+      { "x": 1, "y": 0 },
+      { "x": 4, "y": 0 },
+      { "x": 2, "y": 2 },
+      { "x": 5, "y": 2 }
+    ],
+    "gems": [{ "x": 5, "y": 1 }],
+    "bonusGems": [{ "x": 3, "y": 1 }],
+    "availableBlocks": ["forward", "collect", "repeat"],
+    "optimalBlocks": 3,
+    "hints": [
+      "깃발까지 똑바로 5칸을 가면 돼요! 깃발 칸에 파란 보석도 함께 있어요.",
+      "[5번 반복하기] 안에 [앞으로 가기]를 넣고, 반복이 끝난 뒤 [보석 줍기]를 넣어요.",
+      "[5번 반복하기: 앞으로 가기] → [보석 줍기] (총 3블록!)"
+    ],
+    "referenceSolution": {
+      "main": [
+        { "type": "repeat", "count": 5, "body": [{ "type": "forward" }] },
+        { "type": "collect" }
+      ]
+    }
+  },
+  {
+    "id": "2-2",
+    "chapterId": 2,
+    "stageIndex": 2,
+    "title": "보석이 줄줄이!",
+    "mission": "한 칸 갈 때마다 파란 보석이 있어요! 반복문 안에 두 개의 명령을 넣어 보세요.",
+    "width": 6,
+    "height": 3,
+    "start": { "x": 0, "y": 1, "dir": "E" },
+    "goal": { "x": 5, "y": 1 },
+    "walls": [
+      { "x": 0, "y": 0 },
+      { "x": 2, "y": 0 },
+      { "x": 4, "y": 2 },
+      { "x": 1, "y": 2 }
+    ],
+    "gems": [
+      { "x": 1, "y": 1 },
+      { "x": 2, "y": 1 },
+      { "x": 3, "y": 1 },
+      { "x": 4, "y": 1 }
+    ],
+    "bonusGems": [{ "x": 5, "y": 1 }],
+    "availableBlocks": ["forward", "collect", "repeat"],
+    "optimalBlocks": 4,
+    "hints": [
+      "'앞으로 가기 → 보석 줍기'가 4번 똑같이 반복돼요!",
+      "[4번 반복하기] 안에 [앞으로 가기]와 [보석 줍기]를 넣고, 마지막에 한 칸 더 앞으로 가요.",
+      "[4번 반복하기: 앞으로 가기, 보석 줍기] → [앞으로 가기] (총 4블록!)"
+    ],
+    "referenceSolution": {
+      "main": [
+        {
+          "type": "repeat",
+          "count": 4,
+          "body": [{ "type": "forward" }, { "type": "collect" }]
+        },
+        { "type": "forward" }
+      ]
+    }
+  },
+  {
+    "id": "2-3",
+    "chapterId": 2,
+    "stageIndex": 3,
+    "title": "오아시스 ㄴ자 길",
+    "mission": "앞으로 3칸, 오른쪽으로 돌고 다시 앞으로 3칸! 반복문을 두 번 사용해 봐요.",
+    "width": 5,
+    "height": 5,
+    "start": { "x": 0, "y": 0, "dir": "E" },
+    "goal": { "x": 3, "y": 3 },
+    "walls": [
+      { "x": 1, "y": 1 },
+      { "x": 2, "y": 1 },
+      { "x": 2, "y": 2 },
+      { "x": 4, "y": 0 },
+      { "x": 0, "y": 4 }
+    ],
+    "gems": [
+      { "x": 3, "y": 0 },
+      { "x": 3, "y": 3 }
+    ],
+    "bonusGems": [{ "x": 3, "y": 2 }],
+    "availableBlocks": ["forward", "turn_left", "turn_right", "collect", "repeat"],
+    "optimalBlocks": 5,
+    "hints": [
+      "똑같은 패턴이 2번 반복돼요! '3칸 가기 → 보석 줍기 → 오른쪽 돌기'를 생각해 보세요.",
+      "[2번 반복하기] 안에 [3번 반복하기(앞으로)], [보석 줍기], [오른쪽 돌기]를 넣어 보세요!",
+      "2번 반복: [3번 반복: 앞으로] → 보석 줍기 → 오른쪽 돌기! (총 5블록!)"
+    ],
+    "referenceSolution": {
+      "main": [
+        {
+          "type": "repeat",
+          "count": 2,
+          "body": [
+            { "type": "repeat", "count": 3, "body": [{ "type": "forward" }] },
+            { "type": "collect" },
+            { "type": "turn_right" }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "2-4",
+    "chapterId": 2,
+    "stageIndex": 4,
+    "title": "피라미드 사각 둘레길",
+    "mission": "사각형 둘레에 놓인 보석 3개를 모두 모으고 깃발까지 도착해요!",
+    "width": 5,
+    "height": 5,
+    "start": { "x": 1, "y": 1, "dir": "E" },
+    "goal": { "x": 1, "y": 3 },
+    "walls": [
+      { "x": 2, "y": 2 },
+      { "x": 0, "y": 0 },
+      { "x": 4, "y": 4 },
+      { "x": 0, "y": 4 }
+    ],
+    "gems": [
+      { "x": 3, "y": 1 },
+      { "x": 3, "y": 3 },
+      { "x": 1, "y": 3 }
+    ],
+    "bonusGems": [{ "x": 2, "y": 3 }],
+    "availableBlocks": ["forward", "turn_left", "turn_right", "collect", "repeat"],
+    "optimalBlocks": 6,
+    "hints": [
+      "각 모퉁이까지 2칸씩 이동하고, 보석을 줍고, 오른쪽으로 돌기를 3번 반복하면 돼요!",
+      "[3번 반복하기] 안에 [앞으로, 앞으로, 보석 줍기, 오른쪽 돌기]를 넣어 보세요.",
+      "3번 반복: 앞으로 → 앞으로 → 보석 줍기 → 오른쪽 돌기! (5블록으로도 가능해요!)"
+    ],
+    "referenceSolution": {
+      "main": [
+        {
+          "type": "repeat",
+          "count": 3,
+          "body": [
+            { "type": "forward" },
+            { "type": "forward" },
+            { "type": "collect" },
+            { "type": "turn_right" }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "2-5",
+    "chapterId": 2,
+    "stageIndex": 5,
+    "title": "모래 언덕 계단 오르기",
+    "mission": "계단 모양으로 이어진 사막 길을 반복문 하나로 멋지게 통과해 보세요!",
+    "width": 5,
+    "height": 5,
+    "start": { "x": 0, "y": 0, "dir": "E" },
+    "goal": { "x": 3, "y": 3 },
+    "walls": [
+      { "x": 2, "y": 0 },
+      { "x": 3, "y": 0 },
+      { "x": 0, "y": 2 },
+      { "x": 0, "y": 3 },
+      { "x": 3, "y": 1 },
+      { "x": 1, "y": 3 }
+    ],
+    "gems": [
+      { "x": 1, "y": 1 },
+      { "x": 2, "y": 2 },
+      { "x": 3, "y": 3 }
+    ],
+    "bonusGems": [{ "x": 2, "y": 1 }],
+    "availableBlocks": ["forward", "turn_left", "turn_right", "collect", "repeat"],
+    "optimalBlocks": 6,
+    "hints": [
+      "한 계단은 '앞으로 → 오른쪽 돌기 → 앞으로 → 보석 줍기 → 왼쪽 돌기'예요!",
+      "이 한 계단 패턴을 [3번 반복하기] 안에 넣으면 깃발까지 딱 도착해요.",
+      "3번 반복: 앞으로 → 오른쪽 돌기 → 앞으로 → 보석 줍기 → 왼쪽 돌기!"
+    ],
+    "referenceSolution": {
+      "main": [
+        {
+          "type": "repeat",
+          "count": 3,
+          "body": [
+            { "type": "forward" },
+            { "type": "turn_right" },
+            { "type": "forward" },
+            { "type": "collect" },
+            { "type": "turn_left" }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "3-1",
+    "chapterId": 3,
+    "stageIndex": 1,
+    "title": "버그 1호: 방향이 거꾸로!",
+    "mission": "이미 작성된 코드에 버그가 숨어 있어요! 실행해 보고 틀린 블록 1개만 고쳐 보세요.",
+    "width": 5,
+    "height": 4,
+    "start": { "x": 0, "y": 2, "dir": "E" },
+    "goal": { "x": 2, "y": 0 },
+    "walls": [
+      { "x": 3, "y": 2 },
+      { "x": 0, "y": 0 },
+      { "x": 1, "y": 1 },
+      { "x": 2, "y": 3 }
+    ],
+    "gems": [{ "x": 2, "y": 1 }],
+    "bonusGems": [{ "x": 2, "y": 2 }],
+    "availableBlocks": ["forward", "turn_left", "turn_right", "collect"],
+    "optimalBlocks": 6,
+    "starterBlocks": [
+      { "type": "forward" },
+      { "type": "forward" },
+      { "type": "turn_right" },
+      { "type": "forward" },
+      { "type": "collect" },
+      { "type": "forward" }
+    ],
+    "hints": [
+      "먼저 ▶ 실행 버튼을 눌러 로봇이 어디로 가는지 관찰해 보세요!",
+      "3번째 블록이 [오른쪽으로 돌기]로 되어 있어서 아래쪽 벽에 부딪혀요.",
+      "[오른쪽으로 돌기]를 지우고 [왼쪽으로 돌기]로 바꿔 주면 성공!"
+    ],
+    "referenceSolution": {
+      "main": [
+        { "type": "forward" },
+        { "type": "forward" },
+        { "type": "turn_left" },
+        { "type": "forward" },
+        { "type": "collect" },
+        { "type": "forward" }
+      ]
+    }
+  },
+  {
+    "id": "3-2",
+    "chapterId": 3,
+    "stageIndex": 2,
+    "title": "버그 2호: 숫자가 안 맞아요!",
+    "mission": "반복 횟수가 틀려서 로봇이 깃발 앞에서 멈추거나 벽에 부딪혀요. 숫자만 고쳐 보세요!",
+    "width": 6,
+    "height": 3,
+    "start": { "x": 0, "y": 1, "dir": "E" },
+    "goal": { "x": 4, "y": 1 },
+    "walls": [
+      { "x": 5, "y": 1 },
+      { "x": 1, "y": 0 },
+      { "x": 3, "y": 2 }
+    ],
+    "gems": [
+      { "x": 1, "y": 1 },
+      { "x": 2, "y": 1 },
+      { "x": 3, "y": 1 }
+    ],
+    "bonusGems": [{ "x": 4, "y": 1 }],
+    "availableBlocks": ["forward", "collect", "repeat"],
+    "optimalBlocks": 4,
+    "starterBlocks": [
+      {
+        "type": "repeat",
+        "count": 2,
+        "body": [{ "type": "forward" }, { "type": "collect" }]
+      },
+      { "type": "forward" }
+    ],
+    "hints": [
+      "파란 보석이 모두 몇 개인지 세어 보세요. 1개, 2개, 3개예요!",
+      "지금 반복 횟수가 2번으로 되어 있어서 보석 1개를 놓치고 있어요.",
+      "[2번 반복하기]의 숫자를 3으로 바꾸면 딱 맞아요!"
+    ],
+    "referenceSolution": {
+      "main": [
+        {
+          "type": "repeat",
+          "count": 3,
+          "body": [{ "type": "forward" }, { "type": "collect" }]
+        },
+        { "type": "forward" }
+      ]
+    }
+  },
+  {
+    "id": "3-3",
+    "chapterId": 3,
+    "stageIndex": 3,
+    "title": "버그 3호: 순서가 뒤바뀌었어요!",
+    "mission": "보석을 줍는 위치가 어긋났어요! ⏯ 한 단계씩 실행하며 순서를 바로잡아 보세요.",
+    "width": 5,
+    "height": 4,
+    "start": { "x": 0, "y": 1, "dir": "E" },
+    "goal": { "x": 3, "y": 2 },
+    "walls": [
+      { "x": 0, "y": 2 },
+      { "x": 1, "y": 2 },
+      { "x": 4, "y": 1 },
+      { "x": 2, "y": 0 }
+    ],
+    "gems": [
+      { "x": 2, "y": 1 },
+      { "x": 3, "y": 1 }
+    ],
+    "bonusGems": [{ "x": 1, "y": 1 }],
+    "availableBlocks": ["forward", "turn_left", "turn_right", "collect"],
+    "optimalBlocks": 7,
+    "starterBlocks": [
+      { "type": "forward" },
+      { "type": "collect" },
+      { "type": "forward" },
+      { "type": "forward" },
+      { "type": "collect" },
+      { "type": "turn_right" },
+      { "type": "forward" }
+    ],
+    "hints": [
+      "첫 번째 파란 보석은 출발점에서 2칸 앞에 있어요!",
+      "[보석 줍기]가 1칸 간 직후에 있어서 빈 칸에서 오류가 나요.",
+      "앞으로 → 앞으로 → 보석 줍기 → 앞으로 → 보석 줍기 → 오른쪽 돌기 → 앞으로!"
+    ],
+    "referenceSolution": {
+      "main": [
+        { "type": "forward" },
+        { "type": "forward" },
+        { "type": "collect" },
+        { "type": "forward" },
+        { "type": "collect" },
+        { "type": "turn_right" },
+        { "type": "forward" }
+      ]
+    }
+  },
+  {
+    "id": "3-4",
+    "chapterId": 3,
+    "stageIndex": 4,
+    "title": "버그 4호: 계단 반복문 수리",
+    "mission": "계단을 오르는 반복문 안에 방향 블록 하나가 잘못 들어갔어요. 찾아서 고쳐 보세요!",
+    "width": 5,
+    "height": 5,
+    "start": { "x": 0, "y": 3, "dir": "E" },
+    "goal": { "x": 3, "y": 0 },
+    "walls": [
+      { "x": 0, "y": 1 },
+      { "x": 0, "y": 0 },
+      { "x": 2, "y": 3 },
+      { "x": 3, "y": 2 },
+      { "x": 4, "y": 3 }
+    ],
+    "gems": [
+      { "x": 1, "y": 2 },
+      { "x": 2, "y": 1 },
+      { "x": 3, "y": 0 }
+    ],
+    "bonusGems": [{ "x": 1, "y": 3 }],
+    "availableBlocks": ["forward", "turn_left", "turn_right", "collect", "repeat"],
+    "optimalBlocks": 6,
+    "starterBlocks": [
+      {
+        "type": "repeat",
+        "count": 3,
+        "body": [
+          { "type": "forward" },
+          { "type": "turn_left" },
+          { "type": "forward" },
+          { "type": "collect" },
+          { "type": "turn_left" }
+        ]
+      }
+    ],
+    "hints": [
+      "첫 계단을 올라간 뒤, 다음 계단을 향해 다시 오른쪽을 바라봐야 해요!",
+      "반복문 안의 마지막 블록이 [왼쪽으로 돌기]로 되어 있어 뒤돌아 가고 있어요.",
+      "반복문 안의 마지막 블록만 [오른쪽으로 돌기]로 바꾸면 완벽해요!"
+    ],
+    "referenceSolution": {
+      "main": [
+        {
+          "type": "repeat",
+          "count": 3,
+          "body": [
+            { "type": "forward" },
+            { "type": "turn_left" },
+            { "type": "forward" },
+            { "type": "collect" },
+            { "type": "turn_right" }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "4-1",
+    "chapterId": 4,
+    "stageIndex": 1,
+    "title": "보석이 있을 때만 줍기!",
+    "mission": "길 중간에 보석이 띄엄띄엄 있어요! [만약 보석 위에 있으면]을 반복문 안에 넣어 보세요.",
+    "width": 6,
+    "height": 3,
+    "start": { "x": 0, "y": 1, "dir": "E" },
+    "goal": { "x": 5, "y": 1 },
+    "walls": [
+      { "x": 1, "y": 0 },
+      { "x": 3, "y": 0 },
+      { "x": 2, "y": 2 },
+      { "x": 4, "y": 2 }
+    ],
+    "gems": [
+      { "x": 1, "y": 1 },
+      { "x": 3, "y": 1 },
+      { "x": 5, "y": 1 }
+    ],
+    "bonusGems": [{ "x": 4, "y": 1 }],
+    "availableBlocks": ["forward", "collect", "repeat", "if"],
+    "availableConditions": ["on_gem"],
+    "optimalBlocks": 4,
+    "hints": [
+      "5칸을 앞으로 가면서, 각 칸에 도착했을 때 보석이 있으면 줍고 없으면 지나가요!",
+      "[5번 반복하기] 안에 [앞으로 가기]와 [만약 보석 위에 있으면 → 보석 줍기]를 넣어요.",
+      "5번 반복: 앞으로 → 만약 [보석 위에 있으면]: 보석 줍기 (총 4블록!)"
+    ],
+    "referenceSolution": {
+      "main": [
+        {
+          "type": "repeat",
+          "count": 5,
+          "body": [
+            { "type": "forward" },
+            {
+              "type": "if",
+              "condition": "on_gem",
+              "body": [{ "type": "collect" }]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "4-2",
+    "chapterId": 4,
+    "stageIndex": 2,
+    "title": "벽을 만나면 오른쪽으로!",
+    "mission": "얼음 벽이 앞을 막으면 오른쪽으로 돌아 깃발까지 가는 똑똑한 코드를 만들어 봐요!",
+    "width": 5,
+    "height": 5,
+    "start": { "x": 0, "y": 1, "dir": "E" },
+    "goal": { "x": 3, "y": 3 },
+    "walls": [
+      { "x": 4, "y": 1 },
+      { "x": 0, "y": 3 },
+      { "x": 1, "y": 3 },
+      { "x": 2, "y": 2 }
+    ],
+    "gems": [{ "x": 3, "y": 2 }],
+    "bonusGems": [{ "x": 3, "y": 1 }],
+    "availableBlocks": ["forward", "turn_right", "collect", "repeat", "if", "if_else"],
+    "availableConditions": ["wall_ahead", "on_gem"],
+    "optimalBlocks": 6,
+    "hints": [
+      "로봇이 총 6번 행동(앞으로 3칸 + 돌기 1번 + 앞으로 2칸)하면 깃발에 도착해요!",
+      "[6번 반복하기] 안에 [만약 앞에 벽이 있으면 → 오른쪽 돌기 / 아니면 → 앞으로 가기]를 써 보세요.",
+      "6번 반복: [만약 앞에 벽: 오른쪽 돌기 / 아니면: 앞으로] + [만약 보석 위: 보석 줍기]!"
+    ],
+    "referenceSolution": {
+      "main": [
+        {
+          "type": "repeat",
+          "count": 6,
+          "body": [
+            {
+              "type": "if_else",
+              "condition": "wall_ahead",
+              "body": [{ "type": "turn_right" }],
+              "elseBody": [{ "type": "forward" }]
+            },
+            {
+              "type": "if",
+              "condition": "on_gem",
+              "body": [{ "type": "collect" }]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "4-3",
+    "chapterId": 4,
+    "stageIndex": 3,
+    "title": "얼음 벽을 따라 왼쪽으로!",
+    "mission": "앞에 벽이 나타날 때마다 왼쪽으로 방향을 바꿔 보석 2개를 줍고 깃발로 가요!",
+    "width": 5,
+    "height": 5,
+    "start": { "x": 1, "y": 3, "dir": "E" },
+    "goal": { "x": 1, "y": 1 },
+    "walls": [
+      { "x": 4, "y": 3 },
+      { "x": 3, "y": 0 },
+      { "x": 2, "y": 2 },
+      { "x": 0, "y": 2 }
+    ],
+    "gems": [
+      { "x": 3, "y": 3 },
+      { "x": 3, "y": 1 }
+    ],
+    "bonusGems": [{ "x": 2, "y": 1 }],
+    "availableBlocks": ["forward", "turn_left", "collect", "repeat", "if", "if_else"],
+    "availableConditions": ["wall_ahead", "on_gem"],
+    "optimalBlocks": 6,
+    "hints": [
+      "오른쪽으로 2칸 → 벽 만나서 왼쪽 돌기 → 위로 2칸 → 벽 만나서 왼쪽 돌기 → 왼쪽으로 2칸!",
+      "총 8번 반복하면서 [벽이면 왼쪽 돌기 / 아니면 앞으로] + [보석 위면 줍기]를 실행해요.",
+      "8번 반복: 만약/아니면 [앞에 벽 → 왼쪽 돌기 / 아니면 → 앞으로] + 만약 [보석 위 → 보석 줍기]!"
+    ],
+    "referenceSolution": {
+      "main": [
+        {
+          "type": "repeat",
+          "count": 8,
+          "body": [
+            {
+              "type": "if_else",
+              "condition": "wall_ahead",
+              "body": [{ "type": "turn_left" }],
+              "elseBody": [{ "type": "forward" }]
+            },
+            {
+              "type": "if",
+              "condition": "on_gem",
+              "body": [{ "type": "collect" }]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "4-4",
+    "chapterId": 4,
+    "stageIndex": 4,
+    "title": "열린 길로만 달리기",
+    "mission": "이번에는 [앞이 열려 있으면] 조건을 써서 얼음 협곡 모퉁이를 돌아보아요!",
+    "width": 5,
+    "height": 4,
+    "start": { "x": 0, "y": 0, "dir": "E" },
+    "goal": { "x": 4, "y": 3 },
+    "walls": [
+      { "x": 0, "y": 2 },
+      { "x": 1, "y": 2 },
+      { "x": 2, "y": 2 },
+      { "x": 3, "y": 1 }
+    ],
+    "gems": [
+      { "x": 2, "y": 0 },
+      { "x": 4, "y": 1 },
+      { "x": 4, "y": 2 }
+    ],
+    "bonusGems": [{ "x": 4, "y": 0 }],
+    "availableBlocks": ["forward", "turn_right", "collect", "repeat", "if", "if_else"],
+    "availableConditions": ["path_ahead", "on_gem"],
+    "optimalBlocks": 6,
+    "hints": [
+      "맨 오른쪽 끝(5,1)까지 간 다음 아래로 3칸 내려가면 깃발이에요! (이동 7칸 + 돌기 1번 = 8번 반복)",
+      "[만약 앞이 열려 있으면 → 앞으로 / 아니면 → 오른쪽 돌기]를 써 보세요.",
+      "8번 반복: 만약/아니면 [앞이 열려 있으면 → 앞으로 / 아니면 → 오른쪽 돌기] + 만약 [보석 위 → 보석 줍기]!"
+    ],
+    "referenceSolution": {
+      "main": [
+        {
+          "type": "repeat",
+          "count": 8,
+          "body": [
+            {
+              "type": "if_else",
+              "condition": "path_ahead",
+              "body": [{ "type": "forward" }],
+              "elseBody": [{ "type": "turn_right" }]
+            },
+            {
+              "type": "if",
+              "condition": "on_gem",
+              "body": [{ "type": "collect" }]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "4-5",
+    "chapterId": 4,
+    "stageIndex": 5,
+    "title": "빙하 회오리 탐험",
+    "mission": "오른쪽 벽에 막힐 때마다 오른쪽으로 돌며 소용돌이 안쪽 깃발까지 들어가요!",
+    "width": 5,
+    "height": 5,
+    "start": { "x": 0, "y": 0, "dir": "E" },
+    "goal": { "x": 2, "y": 2 },
+    "walls": [
+      { "x": 0, "y": 1 },
+      { "x": 1, "y": 1 },
+      { "x": 2, "y": 1 },
+      { "x": 0, "y": 2 },
+      { "x": 0, "y": 3 },
+      { "x": 0, "y": 4 },
+      { "x": 1, "y": 4 },
+      { "x": 2, "y": 4 },
+      { "x": 3, "y": 4 },
+      { "x": 4, "y": 4 }
+    ],
+    "gems": [
+      { "x": 3, "y": 0 },
+      { "x": 4, "y": 2 },
+      { "x": 2, "y": 3 }
+    ],
+    "bonusGems": [{ "x": 1, "y": 3 }],
+    "availableBlocks": ["forward", "turn_right", "collect", "repeat", "if", "if_else"],
+    "availableConditions": ["wall_ahead", "on_gem"],
+    "optimalBlocks": 6,
+    "hints": [
+      "벽(또는 맵 끝)에 닿을 때마다 오른쪽으로 돌면 회오리 모양으로 안쪽 깃발까지 들어가요!",
+      "앞으로 12칸 + 오른쪽 돌기 4번 = 총 16번 반복하면 가운데 깃발에 딱 도착해요!",
+      "16번 반복: [만약 앞에 벽: 오른쪽 돌기 / 아니면: 앞으로] + [만약 보석 위: 보석 줍기]!"
+    ],
+    "referenceSolution": {
+      "main": [
+        {
+          "type": "repeat",
+          "count": 16,
+          "body": [
+            {
+              "type": "if_else",
+              "condition": "wall_ahead",
+              "body": [{ "type": "turn_right" }],
+              "elseBody": [{ "type": "forward" }]
+            },
+            {
+              "type": "if",
+              "condition": "on_gem",
+              "body": [{ "type": "collect" }]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "5-1",
+    "chapterId": 5,
+    "stageIndex": 1,
+    "title": "깃발까지 멈추지 마!",
+    "mission": "몇 칸인지 세지 않아도 돼요! [깃발에 도착할 때까지 반복]으로 쭉 달려가 보세요.",
+    "width": 7,
+    "height": 3,
+    "start": { "x": 0, "y": 1, "dir": "E" },
+    "goal": { "x": 6, "y": 1 },
+    "walls": [
+      { "x": 1, "y": 0 },
+      { "x": 3, "y": 0 },
+      { "x": 5, "y": 0 },
+      { "x": 2, "y": 2 },
+      { "x": 4, "y": 2 }
+    ],
+    "gems": [
+      { "x": 2, "y": 1 },
+      { "x": 4, "y": 1 }
+    ],
+    "bonusGems": [{ "x": 5, "y": 1 }],
+    "availableBlocks": ["forward", "collect", "repeat_until_goal", "if"],
+    "availableConditions": ["on_gem"],
+    "optimalBlocks": 4,
+    "hints": [
+      "[깃발에 도착할 때까지 반복] 안에 앞으로 가기와 보석 줍기 조건문을 넣어 보세요.",
+      "깃발 칸에는 보석이 없으니, 깃발에 닿는 순간 반복이 딱 끝나며 성공해요!",
+      "깃발까지 반복: 앞으로 가기 → 만약 [보석 위에 있으면]: 보석 줍기! (4블록)"
+    ],
+    "referenceSolution": {
+      "main": [
+        {
+          "type": "repeat_until_goal",
+          "body": [
+            { "type": "forward" },
+            {
+              "type": "if",
+              "condition": "on_gem",
+              "body": [{ "type": "collect" }]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "5-2",
+    "chapterId": 5,
+    "stageIndex": 2,
+    "title": "화산 절벽 따라 돌기",
+    "mission": "이제 반복 횟수를 세지 말고 [깃발까지 반복]과 [앞에 벽이 있으면]을 합쳐 보세요!",
+    "width": 6,
+    "height": 5,
+    "start": { "x": 0, "y": 0, "dir": "E" },
+    "goal": { "x": 1, "y": 4 },
+    "walls": [
+      { "x": 0, "y": 2 },
+      { "x": 1, "y": 2 },
+      { "x": 2, "y": 2 },
+      { "x": 3, "y": 2 },
+      { "x": 4, "y": 1 },
+      { "x": 4, "y": 2 },
+      { "x": 4, "y": 3 }
+    ],
+    "gems": [
+      { "x": 3, "y": 0 },
+      { "x": 5, "y": 2 },
+      { "x": 3, "y": 4 }
+    ],
+    "bonusGems": [{ "x": 5, "y": 4 }],
+    "availableBlocks": ["forward", "turn_right", "collect", "repeat_until_goal", "if", "if_else"],
+    "availableConditions": ["wall_ahead", "on_gem"],
+    "optimalBlocks": 6,
+    "hints": [
+      "벽이나 맵 끝에 닿을 때마다 오른쪽으로 돌면 ㄷ자 화산길을 따라 깃발까지 도착해요!",
+      "[깃발까지 반복] 안에 [만약 앞에 벽이면 오른쪽 돌기 / 아니면 앞으로] + [보석 위면 줍기]!",
+      "깃발까지 반복: 만약/아니면 [앞에 벽 → 오른쪽 돌기 / 아니면 → 앞으로] + 만약 [보석 위 → 보석 줍기]!"
+    ],
+    "referenceSolution": {
+      "main": [
+        {
+          "type": "repeat_until_goal",
+          "body": [
+            {
+              "type": "if_else",
+              "condition": "wall_ahead",
+              "body": [{ "type": "turn_right" }],
+              "elseBody": [{ "type": "forward" }]
+            },
+            {
+              "type": "if",
+              "condition": "on_gem",
+              "body": [{ "type": "collect" }]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "5-3",
+    "chapterId": 5,
+    "stageIndex": 3,
+    "title": "용암 동굴 왼쪽 탐험",
+    "mission": "이번에는 벽을 만날 때마다 왼쪽으로 돌아 보석을 주우며 깃발을 찾아요!",
+    "width": 6,
+    "height": 5,
+    "start": { "x": 0, "y": 4, "dir": "E" },
+    "goal": { "x": 2, "y": 2 },
+    "walls": [
+      { "x": 1, "y": 3 },
+      { "x": 2, "y": 3 },
+      { "x": 3, "y": 3 },
+      { "x": 4, "y": 3 },
+      { "x": 4, "y": 2 },
+      { "x": 4, "y": 1 },
+      { "x": 1, "y": 1 },
+      { "x": 2, "y": 1 },
+      { "x": 3, "y": 1 },
+      { "x": 0, "y": 3 }
+    ],
+    "gems": [
+      { "x": 5, "y": 4 },
+      { "x": 5, "y": 0 },
+      { "x": 0, "y": 0 },
+      { "x": 0, "y": 2 }
+    ],
+    "bonusGems": [{ "x": 1, "y": 2 }],
+    "availableBlocks": ["forward", "turn_left", "collect", "repeat_until_goal", "if", "if_else"],
+    "availableConditions": ["wall_ahead", "on_gem"],
+    "optimalBlocks": 6,
+    "hints": [
+      "로봇이 바깥쪽을 따라 왼쪽으로 계속 꺾어 들어가면 자연스럽게 가운데 깃발에 도착해요!",
+      "[깃발까지 반복] 안에 [앞에 벽이면 왼쪽 돌기 / 아니면 앞으로]를 넣어 보세요.",
+      "깃발까지 반복: 만약/아니면 [앞에 벽 → 왼쪽 돌기 / 아니면 → 앞으로] + 만약 [보석 위 → 보석 줍기]!"
+    ],
+    "referenceSolution": {
+      "main": [
+        {
+          "type": "repeat_until_goal",
+          "body": [
+            {
+              "type": "if_else",
+              "condition": "wall_ahead",
+              "body": [{ "type": "turn_left" }],
+              "elseBody": [{ "type": "forward" }]
+            },
+            {
+              "type": "if",
+              "condition": "on_gem",
+              "body": [{ "type": "collect" }]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "5-4",
+    "chapterId": 5,
+    "stageIndex": 4,
+    "title": "오른쪽 벽 확인 미로",
+    "mission": "앞이 막혔을 때 오른쪽도 막혀 있으면 왼쪽으로, 열려 있으면 오른쪽으로 돌아가요!",
+    "width": 6,
+    "height": 5,
+    "start": { "x": 0, "y": 2, "dir": "E" },
+    "goal": { "x": 5, "y": 4 },
+    "walls": [
+      { "x": 0, "y": 1 },
+      { "x": 1, "y": 1 },
+      { "x": 2, "y": 1 },
+      { "x": 3, "y": 1 },
+      { "x": 3, "y": 2 },
+      { "x": 0, "y": 3 },
+      { "x": 1, "y": 3 },
+      { "x": 2, "y": 4 },
+      { "x": 3, "y": 4 },
+      { "x": 4, "y": 1 },
+      { "x": 5, "y": 1 },
+      { "x": 4, "y": 2 },
+      { "x": 5, "y": 2 },
+      { "x": 2, "y": 0 }
+    ],
+    "gems": [
+      { "x": 2, "y": 2 },
+      { "x": 2, "y": 3 },
+      { "x": 5, "y": 3 }
+    ],
+    "bonusGems": [{ "x": 4, "y": 3 }],
+    "availableBlocks": ["forward", "turn_left", "turn_right", "collect", "repeat_until_goal", "if", "if_else"],
+    "availableConditions": ["wall_ahead", "wall_right", "on_gem"],
+    "optimalBlocks": 8,
+    "hints": [
+      "첫 모퉁이에서는 오른쪽(아래)이 열려 있고, 두 번째 모퉁이에서는 오른쪽(아래)에 벽이 있어서 왼쪽으로 돌아야 해요!",
+      "앞에 벽이 있을 때, [만약 오른쪽에 벽이 있으면 → 왼쪽 돌기 / 아니면 → 오른쪽 돌기]를 넣어 보세요.",
+      "깃발까지 반복: 만약 [앞에 벽]: (만약 [오른쪽에 벽]: 왼쪽 / 아니면: 오른쪽) / 아니면: 앞으로 → 만약 [보석 위]: 보석 줍기!"
+    ],
+    "referenceSolution": {
+      "main": [
+        {
+          "type": "repeat_until_goal",
+          "body": [
+            {
+              "type": "if_else",
+              "condition": "wall_ahead",
+              "body": [
+                {
+                  "type": "if_else",
+                  "condition": "wall_right",
+                  "body": [{ "type": "turn_left" }],
+                  "elseBody": [{ "type": "turn_right" }]
+                }
+              ],
+              "elseBody": [{ "type": "forward" }]
+            },
+            {
+              "type": "if",
+              "condition": "on_gem",
+              "body": [{ "type": "collect" }]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "5-5",
+    "chapterId": 5,
+    "stageIndex": 5,
+    "title": "화산의 미로 마스터",
+    "mission": "왼쪽과 오른쪽이 섞여 있는 용암 미로를 [깃발까지 반복]과 조건문으로 탈출해요!",
+    "width": 6,
+    "height": 5,
+    "start": { "x": 0, "y": 4, "dir": "E" },
+    "goal": { "x": 5, "y": 0 },
+    "walls": [
+      { "x": 0, "y": 3 },
+      { "x": 1, "y": 3 },
+      { "x": 3, "y": 4 },
+      { "x": 3, "y": 3 },
+      { "x": 1, "y": 1 },
+      { "x": 2, "y": 1 },
+      { "x": 3, "y": 1 },
+      { "x": 4, "y": 1 },
+      { "x": 4, "y": 3 },
+      { "x": 5, "y": 3 },
+      { "x": 5, "y": 4 },
+      { "x": 0, "y": 0 },
+      { "x": 1, "y": 0 }
+    ],
+    "gems": [
+      { "x": 2, "y": 4 },
+      { "x": 2, "y": 2 },
+      { "x": 5, "y": 2 }
+    ],
+    "bonusGems": [{ "x": 5, "y": 1 }],
+    "availableBlocks": ["forward", "turn_left", "turn_right", "collect", "repeat_until_goal", "if", "if_else"],
+    "availableConditions": ["wall_ahead", "wall_left", "on_gem"],
+    "optimalBlocks": 8,
+    "hints": [
+      "벽을 만났을 때 왼쪽이 막혀 있으면 오른쪽으로, 왼쪽이 열려 있으면 왼쪽으로 돌면 돼요!",
+      "깃발까지 반복 안에 [앞에 벽이면 → (왼쪽에 벽이면 오른쪽 / 아니면 왼쪽) / 아니면 앞으로]를 넣어 보세요.",
+      "깃발까지 반복: 만약 [앞에 벽]: (만약 [왼쪽에 벽]: 오른쪽 / 아니면: 왼쪽) / 아니면: 앞으로 + 만약 [보석 위]: 보석 줍기!"
+    ],
+    "referenceSolution": {
+      "main": [
+        {
+          "type": "repeat_until_goal",
+          "body": [
+            {
+              "type": "if_else",
+              "condition": "wall_ahead",
+              "body": [
+                {
+                  "type": "if_else",
+                  "condition": "wall_left",
+                  "body": [{ "type": "turn_right" }],
+                  "elseBody": [{ "type": "turn_left" }]
+                }
+              ],
+              "elseBody": [{ "type": "forward" }]
+            },
+            {
+              "type": "if",
+              "condition": "on_gem",
+              "body": [{ "type": "collect" }]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "6-1",
+    "chapterId": 6,
+    "stageIndex": 1,
+    "title": "나만의 '보석 수확' 명령",
+    "mission": "[내 명령 만들기] 탭에서 '앞으로 2칸 + 보석 줍기' 함수를 만들고, 메인 코드에서 3번 불러 보세요!",
+    "width": 7,
+    "height": 3,
+    "start": { "x": 0, "y": 1, "dir": "E" },
+    "goal": { "x": 6, "y": 1 },
+    "walls": [
+      { "x": 0, "y": 0 },
+      { "x": 3, "y": 0 },
+      { "x": 6, "y": 0 },
+      { "x": 1, "y": 2 },
+      { "x": 5, "y": 2 }
+    ],
+    "gems": [
+      { "x": 2, "y": 1 },
+      { "x": 4, "y": 1 },
+      { "x": 6, "y": 1 }
+    ],
+    "bonusGems": [{ "x": 3, "y": 1 }],
+    "availableBlocks": ["forward", "collect", "repeat", "call_func"],
+    "allowFunction": true,
+    "functionLabel": "보석 수확",
+    "optimalBlocks": 5,
+    "hints": [
+      "2칸마다 파란 보석이 놓여 있어요! [내 명령 만들기] 탭을 눌러 보세요.",
+      "내 명령(함수)에 [앞으로, 앞으로, 보석 줍기] 3개를 넣고, 메인 코드에서 3번 반복해 불러요!",
+      "내 명령: 앞으로 → 앞으로 → 보석 줍기 / 메인: 3번 반복 → [내 명령 실행] (총 5블록!)"
+    ],
+    "referenceSolution": {
+      "func": [
+        { "type": "forward" },
+        { "type": "forward" },
+        { "type": "collect" }
+      ],
+      "main": [
+        {
+          "type": "repeat",
+          "count": 3,
+          "body": [{ "type": "call_func" }]
+        }
+      ]
+    }
+  },
+  {
+    "id": "6-2",
+    "chapterId": 6,
+    "stageIndex": 2,
+    "title": "'계단 오르기' 함수 만들기",
+    "mission": "하늘 계단이 3칸 이어져 있어요! '계단 오르기' 함수를 만들어 깔끔하게 올라가 보세요.",
+    "width": 5,
+    "height": 5,
+    "start": { "x": 0, "y": 3, "dir": "E" },
+    "goal": { "x": 3, "y": 0 },
+    "walls": [
+      { "x": 0, "y": 0 },
+      { "x": 0, "y": 1 },
+      { "x": 1, "y": 0 },
+      { "x": 2, "y": 3 },
+      { "x": 3, "y": 2 },
+      { "x": 4, "y": 1 }
+    ],
+    "gems": [
+      { "x": 1, "y": 2 },
+      { "x": 2, "y": 1 },
+      { "x": 3, "y": 0 }
+    ],
+    "bonusGems": [{ "x": 2, "y": 2 }],
+    "availableBlocks": ["forward", "turn_left", "turn_right", "collect", "repeat", "call_func"],
+    "allowFunction": true,
+    "functionLabel": "계단 오르기",
+    "optimalBlocks": 7,
+    "hints": [
+      "계단 한 칸은 '앞으로 → 왼쪽 돌기 → 앞으로 → 보석 줍기 → 오른쪽 돌기'예요!",
+      "[내 명령 만들기] 탭에 계단 한 칸을 만들고, [메인 코드]에서 3번 반복해 실행해요.",
+      "내 명령: 앞으로 → 왼쪽 돌기 → 앞으로 → 보석 줍기 → 오른쪽 돌기 / 메인: 3번 반복 → 내 명령 실행!"
+    ],
+    "referenceSolution": {
+      "func": [
+        { "type": "forward" },
+        { "type": "turn_left" },
+        { "type": "forward" },
+        { "type": "collect" },
+        { "type": "turn_right" }
+      ],
+      "main": [
+        {
+          "type": "repeat",
+          "count": 3,
+          "body": [{ "type": "call_func" }]
+        }
+      ]
+    }
+  },
+  {
+    "id": "6-3",
+    "chapterId": 6,
+    "stageIndex": 3,
+    "title": "'구름 기둥 넘기' 함수",
+    "mission": "중간에 구름 기둥이 2개 막고 있어요! '장애물 넘기' 함수를 만들어 2번 사용해 봐요.",
+    "width": 6,
+    "height": 4,
+    "start": { "x": 0, "y": 2, "dir": "E" },
+    "goal": { "x": 5, "y": 2 },
+    "walls": [
+      { "x": 1, "y": 2 },
+      { "x": 1, "y": 3 },
+      { "x": 4, "y": 2 },
+      { "x": 4, "y": 3 }
+    ],
+    "gems": [
+      { "x": 1, "y": 1 },
+      { "x": 4, "y": 1 }
+    ],
+    "bonusGems": [{ "x": 3, "y": 2 }],
+    "availableBlocks": ["forward", "turn_left", "turn_right", "collect", "repeat", "call_func"],
+    "allowFunction": true,
+    "functionLabel": "기둥 넘기",
+    "optimalBlocks": 12,
+    "hints": [
+      "기둥 하나를 위로 돌아 넘는 동작: 왼쪽 돌기 → 앞으로 → 오른쪽 돌기 → 앞으로 → 보석 줍기 → 앞으로 → 오른쪽 돌기 → 앞으로 → 왼쪽 돌기!",
+      "첫 기둥을 넘고, 1칸 앞으로 간 뒤, 두 번째 기둥을 넘으면 깃발에 도착해요!",
+      "내 명령(9블록): 왼→앞→오→앞→줍기→앞→오→앞→왼 / 메인(3블록): 내 명령 → 앞으로 → 내 명령!"
+    ],
+    "referenceSolution": {
+      "func": [
+        { "type": "turn_left" },
+        { "type": "forward" },
+        { "type": "turn_right" },
+        { "type": "forward" },
+        { "type": "collect" },
+        { "type": "forward" },
+        { "type": "turn_right" },
+        { "type": "forward" },
+        { "type": "turn_left" }
+      ],
+      "main": [
+        { "type": "call_func" },
+        { "type": "forward" },
+        { "type": "call_func" }
+      ]
+    }
+  },
+  {
+    "id": "6-4",
+    "chapterId": 6,
+    "stageIndex": 4,
+    "title": "하늘 정원 쌍둥이 모퉁이",
+    "mission": "같은 모양의 하늘 다리가 2번 이어져요! 함수 안에 반복문을 넣어 보석을 쓸어 담아 봐요.",
+    "width": 6,
+    "height": 5,
+    "start": { "x": 0, "y": 0, "dir": "E" },
+    "goal": { "x": 4, "y": 4 },
+    "walls": [
+      { "x": 3, "y": 0 },
+      { "x": 4, "y": 0 },
+      { "x": 0, "y": 2 },
+      { "x": 1, "y": 2 },
+      { "x": 0, "y": 3 },
+      { "x": 1, "y": 3 },
+      { "x": 5, "y": 1 },
+      { "x": 2, "y": 4 }
+    ],
+    "gems": [
+      { "x": 1, "y": 0 },
+      { "x": 2, "y": 0 },
+      { "x": 2, "y": 1 },
+      { "x": 2, "y": 2 },
+      { "x": 3, "y": 2 },
+      { "x": 4, "y": 2 },
+      { "x": 4, "y": 3 },
+      { "x": 4, "y": 4 }
+    ],
+    "bonusGems": [{ "x": 2, "y": 2 }],
+    "availableBlocks": ["forward", "turn_left", "turn_right", "collect", "repeat", "call_func"],
+    "allowFunction": true,
+    "functionLabel": "2칸 수확",
+    "optimalBlocks": 9,
+    "hints": [
+      "모든 직선 구간이 '2칸 앞으로 가며 보석 줍기'로 똑같아요!",
+      "내 명령에 [2번 반복: 앞으로, 보석 줍기]를 만들어 보세요.",
+      "메인 코드: 2번 반복 [내 명령 → 오른쪽 돌기 → 내 명령 → 왼쪽 돌기]!"
+    ],
+    "referenceSolution": {
+      "func": [
+        {
+          "type": "repeat",
+          "count": 2,
+          "body": [{ "type": "forward" }, { "type": "collect" }]
+        }
+      ],
+      "main": [
+        {
+          "type": "repeat",
+          "count": 2,
+          "body": [
+            { "type": "call_func" },
+            { "type": "turn_right" },
+            { "type": "call_func" },
+            { "type": "turn_left" }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "7-1",
+    "chapterId": 7,
+    "stageIndex": 1,
+    "title": "열쇠 번호를 맞춰라!",
+    "mission": "앞에 🔑 3번 자물쇠 문이 막고 있어요! 열쇠 변수에 3을 저장하고 문을 열어 통과해요.",
+    "width": 5,
+    "height": 3,
+    "start": { "x": 0, "y": 1, "dir": "E" },
+    "goal": { "x": 4, "y": 1 },
+    "walls": [
+      { "x": 2, "y": 0 },
+      { "x": 2, "y": 2 },
+      { "x": 0, "y": 0 },
+      { "x": 4, "y": 2 }
+    ],
+    "gems": [{ "x": 3, "y": 1 }],
+    "bonusGems": [{ "x": 2, "y": 1 }],
+    "doors": [{ "x": 2, "y": 1, "requiredKey": 3 }],
+    "availableBlocks": ["forward", "collect", "set_var", "unlock"],
+    "optimalBlocks": 7,
+    "hints": [
+      "잠긴 문 바로 앞(2,2)까지 가서, [열쇠 = 3]으로 맞춘 뒤 [문 열기]를 실행하세요!",
+      "문이 열리면 통과해서 파란 보석을 줍고 깃발로 가면 돼요.",
+      "앞으로 → [열쇠 = 3] → [문 열기] → 앞으로 → 앞으로 → 보석 줍기 → 앞으로!"
+    ],
+    "referenceSolution": {
+      "main": [
+        { "type": "forward" },
+        { "type": "set_var", "count": 3 },
+        { "type": "unlock" },
+        { "type": "forward" },
+        { "type": "forward" },
+        { "type": "collect" },
+        { "type": "forward" }
+      ]
+    }
+  },
+  {
+    "id": "7-2",
+    "chapterId": 7,
+    "stageIndex": 2,
+    "title": "암호 더하기 문 두 개",
+    "mission": "첫 번째 문은 🔑 2번, 두 번째 문은 🔑 5번이에요! [열쇠 + 3]을 써서 두 문을 모두 열어 봐요.",
+    "width": 6,
+    "height": 3,
+    "start": { "x": 0, "y": 1, "dir": "E" },
+    "goal": { "x": 5, "y": 1 },
+    "walls": [
+      { "x": 1, "y": 0 },
+      { "x": 1, "y": 2 },
+      { "x": 3, "y": 0 },
+      { "x": 3, "y": 2 }
+    ],
+    "gems": [
+      { "x": 2, "y": 1 },
+      { "x": 4, "y": 1 }
+    ],
+    "bonusGems": [{ "x": 3, "y": 1 }],
+    "doors": [
+      { "x": 1, "y": 1, "requiredKey": 2 },
+      { "x": 3, "y": 1, "requiredKey": 5 }
+    ],
+    "numberPads": [
+      { "x": 0, "y": 1, "label": "2" },
+      { "x": 2, "y": 1, "label": "+3" }
+    ],
+    "availableBlocks": ["forward", "collect", "set_var", "add_var", "unlock"],
+    "optimalBlocks": 11,
+    "hints": [
+      "출발점 바로 앞에 2번 문이 있어요! [열쇠 = 2] → [문 열기]로 첫 문을 열어요.",
+      "2칸 가서 보석을 주운 뒤, 2 + 3 = 5가 되도록 [열쇠 + 3] → [문 열기]를 실행하세요!",
+      "열쇠=2 → 문 열기 → 앞으로 → 앞으로 → 보석 줍기 → 열쇠+3 → 문 열기 → 앞으로 → 앞으로 → 보석 줍기 → 앞으로!"
+    ],
+    "referenceSolution": {
+      "main": [
+        { "type": "set_var", "count": 2 },
+        { "type": "unlock" },
+        { "type": "forward" },
+        { "type": "forward" },
+        { "type": "collect" },
+        { "type": "add_var", "count": 3 },
+        { "type": "unlock" },
+        { "type": "forward" },
+        { "type": "forward" },
+        { "type": "collect" },
+        { "type": "forward" }
+      ]
+    }
+  },
+  {
+    "id": "7-3",
+    "chapterId": 7,
+    "stageIndex": 3,
+    "title": "보석 개수를 세어 문 열기",
+    "mission": "보석을 주울 때마다 [보석수 + 1]로 기록하세요! 💎 3개 보석 문이 기다리고 있어요.",
+    "width": 6,
+    "height": 3,
+    "start": { "x": 0, "y": 1, "dir": "E" },
+    "goal": { "x": 5, "y": 1 },
+    "walls": [
+      { "x": 4, "y": 0 },
+      { "x": 4, "y": 2 },
+      { "x": 0, "y": 0 },
+      { "x": 2, "y": 2 }
+    ],
+    "gems": [
+      { "x": 1, "y": 1 },
+      { "x": 2, "y": 1 },
+      { "x": 3, "y": 1 }
+    ],
+    "bonusGems": [{ "x": 4, "y": 1 }],
+    "doors": [{ "x": 4, "y": 1, "requiredGems": 3 }],
+    "availableBlocks": ["forward", "collect", "count_gem", "unlock", "repeat"],
+    "optimalBlocks": 7,
+    "hints": [
+      "3번 반복하면서 '앞으로 → 보석 줍기 → 보석수 + 1'을 하면 보석수가 3이 돼요!",
+      "3번째 보석을 줍고 나면 바로 앞이 💎 3번 문이에요. [문 열기] 후 앞으로 2칸!",
+      "3번 반복: [앞으로, 보석 줍기, 보석수+1] → 문 열기 → 앞으로 → 앞으로! (총 7블록)"
+    ],
+    "referenceSolution": {
+      "main": [
+        {
+          "type": "repeat",
+          "count": 3,
+          "body": [
+            { "type": "forward" },
+            { "type": "collect" },
+            { "type": "count_gem" }
+          ]
+        },
+        { "type": "unlock" },
+        { "type": "forward" },
+        { "type": "forward" }
+      ]
+    }
+  },
+  {
+    "id": "7-4",
+    "chapterId": 7,
+    "stageIndex": 4,
+    "title": "변수만큼 달려라!",
+    "mission": "보석을 줍고 개수를 센 다음, [보석수만큼 반복하기]로 아래쪽 깃발까지 이동해 보세요!",
+    "width": 5,
+    "height": 5,
+    "start": { "x": 0, "y": 0, "dir": "E" },
+    "goal": { "x": 3, "y": 3 },
+    "walls": [
+      { "x": 1, "y": 1 },
+      { "x": 2, "y": 1 },
+      { "x": 2, "y": 2 },
+      { "x": 4, "y": 0 },
+      { "x": 0, "y": 4 }
+    ],
+    "gems": [
+      { "x": 1, "y": 0 },
+      { "x": 2, "y": 0 },
+      { "x": 3, "y": 0 }
+    ],
+    "bonusGems": [{ "x": 3, "y": 2 }],
+    "availableBlocks": ["forward", "turn_right", "collect", "count_gem", "repeat", "repeat_var"],
+    "optimalBlocks": 7,
+    "hints": [
+      "위쪽 길에서 보석 3개를 주우며 [보석수 + 1]을 기록하면 보석수가 3이 돼요!",
+      "오른쪽으로 돈 뒤, [보석수만큼 반복하기] 안에 [앞으로 가기]를 넣으면 딱 3칸 내려가요!",
+      "3번 반복: [앞으로, 보석 줍기, 보석수+1] → 오른쪽 돌기 → [보석수만큼 반복: 앞으로]!"
+    ],
+    "referenceSolution": {
+      "main": [
+        {
+          "type": "repeat",
+          "count": 3,
+          "body": [
+            { "type": "forward" },
+            { "type": "collect" },
+            { "type": "count_gem" }
+          ]
+        },
+        { "type": "turn_right" },
+        {
+          "type": "repeat_var",
+          "varName": "gems",
+          "body": [{ "type": "forward" }]
+        }
+      ]
+    }
+  },
+  {
+    "id": "8-1",
+    "chapterId": 8,
+    "stageIndex": 1,
+    "title": "블록이 파이썬 코드로!",
+    "mission": "블록을 조립하면서 오른쪽에 나타나는 파이썬(Python) 글자 코드를 유심히 살펴보세요!",
+    "width": 5,
+    "height": 4,
+    "start": { "x": 0, "y": 1, "dir": "E" },
+    "goal": { "x": 3, "y": 3 },
+    "walls": [
+      { "x": 0, "y": 2 },
+      { "x": 1, "y": 2 },
+      { "x": 2, "y": 2 },
+      { "x": 4, "y": 1 }
+    ],
+    "gems": [
+      { "x": 1, "y": 1 },
+      { "x": 2, "y": 1 },
+      { "x": 3, "y": 1 }
+    ],
+    "bonusGems": [{ "x": 3, "y": 2 }],
+    "availableBlocks": ["forward", "turn_right", "collect", "repeat"],
+    "codingMode": "dual",
+    "optimalBlocks": 6,
+    "hints": [
+      "앞으로 3칸 보석을 줍고, 오른쪽으로 돌아 2칸 가면 깃발이에요!",
+      "블록을 놓을 때마다 오른쪽 파이썬 코드에 for i in range(3): 가 생기는 걸 확인해 보세요.",
+      "3번 반복: [앞으로, 보석 줍기] → 오른쪽 돌기 → 2번 반복: [앞으로]!"
+    ],
+    "referenceSolution": {
+      "main": [
+        {
+          "type": "repeat",
+          "count": 3,
+          "body": [{ "type": "forward" }, { "type": "collect" }]
+        },
+        { "type": "turn_right" },
+        { "type": "repeat", "count": 2, "body": [{ "type": "forward" }] }
+      ],
+      "python": "for i in range(3):\n    forward()\n    collect()\nturn_right()\nfor i in range(2):\n    forward()"
+    }
+  },
+  {
+    "id": "8-2",
+    "chapterId": 8,
+    "stageIndex": 2,
+    "title": "우주 정거장 파이썬 조건문",
+    "mission": "블록과 파이썬 while / if 코드를 함께 보며 우주 정거장 회랑을 통과해 봐요!",
+    "width": 6,
+    "height": 4,
+    "start": { "x": 0, "y": 0, "dir": "E" },
+    "goal": { "x": 4, "y": 3 },
+    "walls": [
+      { "x": 5, "y": 0 },
+      { "x": 0, "y": 2 },
+      { "x": 1, "y": 2 },
+      { "x": 2, "y": 2 },
+      { "x": 3, "y": 2 }
+    ],
+    "gems": [
+      { "x": 2, "y": 0 },
+      { "x": 4, "y": 1 },
+      { "x": 4, "y": 2 }
+    ],
+    "bonusGems": [{ "x": 4, "y": 0 }],
+    "availableBlocks": ["forward", "turn_right", "collect", "repeat_until_goal", "if", "if_else"],
+    "availableConditions": ["wall_ahead", "on_gem"],
+    "codingMode": "dual",
+    "optimalBlocks": 6,
+    "hints": [
+      "while not at_goal(): (깃발까지 반복) 안에 벽이면 오른쪽 돌기, 아니면 앞으로를 넣어 보세요!",
+      "보석 위에 있을 때만 collect() (보석 줍기)를 실행하면 완성돼요.",
+      "깃발까지 반복: 만약/아니면 [앞에 벽 → 오른쪽 / 아니면 → 앞으로] + 만약 [보석 위 → 보석 줍기]!"
+    ],
+    "referenceSolution": {
+      "main": [
+        {
+          "type": "repeat_until_goal",
+          "body": [
+            {
+              "type": "if_else",
+              "condition": "wall_ahead",
+              "body": [{ "type": "turn_right" }],
+              "elseBody": [{ "type": "forward" }]
+            },
+            {
+              "type": "if",
+              "condition": "on_gem",
+              "body": [{ "type": "collect" }]
+            }
+          ]
+        }
+      ],
+      "python": "while not at_goal():\n    if wall_ahead():\n        turn_right()\n    else:\n        forward()\n    if on_gem():\n        collect()"
+    }
+  },
+  {
+    "id": "8-3",
+    "chapterId": 8,
+    "stageIndex": 3,
+    "title": "직접 쓰는 첫 파이썬 코드!",
+    "mission": "이제 진짜 프로그래머처럼 파이썬 글자 코드를 직접 써 보세요! 아래 명령어 버튼을 눌러 쉽게 넣을 수도 있어요.",
+    "width": 5,
+    "height": 3,
+    "start": { "x": 0, "y": 1, "dir": "E" },
+    "goal": { "x": 4, "y": 1 },
+    "walls": [
+      { "x": 1, "y": 0 },
+      { "x": 3, "y": 0 },
+      { "x": 2, "y": 2 }
+    ],
+    "gems": [
+      { "x": 1, "y": 1 },
+      { "x": 2, "y": 1 },
+      { "x": 3, "y": 1 }
+    ],
+    "bonusGems": [{ "x": 4, "y": 1 }],
+    "availableBlocks": ["forward", "collect", "repeat"],
+    "codingMode": "text",
+    "optimalBlocks": 4,
+    "starterCode": "# 앞으로 가며 보석 3개를 줍고 깃발로 가 보세요!\nfor i in range(3):\n    forward()\n    # 여기에 보석 줍기 명령을 넣어 보세요\n",
+    "hints": [
+      "반복문 안에는 forward() 다음에 collect()가 필요해요! (앞에 띄어쓰기 4칸)",
+      "반복이 끝난 다음에는 맨 왼쪽 줄에서 forward()를 한 번 더 써서 깃발로 가요!",
+      "for i in range(3):\n    forward()\n    collect()\nforward()"
+    ],
+    "referenceSolution": {
+      "main": [
+        {
+          "type": "repeat",
+          "count": 3,
+          "body": [{ "type": "forward" }, { "type": "collect" }]
+        },
+        { "type": "forward" }
+      ],
+      "python": "for i in range(3):\n    forward()\n    collect()\nforward()"
+    }
+  },
+  {
+    "id": "8-4",
+    "chapterId": 8,
+    "stageIndex": 4,
+    "title": "우주 탐험대 졸업 미션!",
+    "mission": "마지막 도전! 파이썬의 while, if, else를 직접 작성해 별빛 정거장의 모든 보석을 모아 깃발에 도착하세요!",
+    "width": 6,
+    "height": 5,
+    "start": { "x": 0, "y": 4, "dir": "E" },
+    "goal": { "x": 1, "y": 0 },
+    "walls": [
+      { "x": 0, "y": 2 },
+      { "x": 1, "y": 2 },
+      { "x": 2, "y": 2 },
+      { "x": 3, "y": 2 },
+      { "x": 4, "y": 2 },
+      { "x": 4, "y": 3 },
+      { "x": 4, "y": 1 }
+    ],
+    "gems": [
+      { "x": 3, "y": 4 },
+      { "x": 5, "y": 2 },
+      { "x": 3, "y": 0 }
+    ],
+    "bonusGems": [{ "x": 5, "y": 0 }],
+    "availableBlocks": ["forward", "turn_left", "collect", "repeat_until_goal", "if", "if_else"],
+    "availableConditions": ["wall_ahead", "on_gem"],
+    "codingMode": "text",
+    "optimalBlocks": 6,
+    "starterCode": "# 깃발에 도착할 때까지 벽을 만나면 왼쪽으로 돌아요!\nwhile not at_goal():\n    if wall_ahead():\n        turn_left()\n    else:\n        forward()\n    # 보석 위에 있으면 줍도록 코드를 추가해 보세요!\n",
+    "hints": [
+      "while 반복문 안 마지막에 보석 확인 조건문 `if on_gem():`을 추가해 보세요!",
+      "들여쓰기를 맞춰서 `if on_gem():` 아래에 8칸 들여쓰기로 `collect()`를 넣어요.",
+      "while not at_goal():\n    if wall_ahead():\n        turn_left()\n    else:\n        forward()\n    if on_gem():\n        collect()"
+    ],
+    "referenceSolution": {
+      "main": [
+        {
+          "type": "repeat_until_goal",
+          "body": [
+            {
+              "type": "if_else",
+              "condition": "wall_ahead",
+              "body": [{ "type": "turn_left" }],
+              "elseBody": [{ "type": "forward" }]
+            },
+            {
+              "type": "if",
+              "condition": "on_gem",
+              "body": [{ "type": "collect" }]
+            }
+          ]
+        }
+      ],
+      "python": "while not at_goal():\n    if wall_ahead():\n        turn_left()\n    else:\n        forward()\n    if on_gem():\n        collect()"
+    }
+  }
+]

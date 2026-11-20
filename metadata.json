@@ -1,0 +1,6 @@
+{
+  "name": "코딩 탐험대 3D",
+  "description": "초등학생과 코딩 입문자를 위한 Three.js 3D 로봇 블록·파이썬 코딩 학습 게임",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
